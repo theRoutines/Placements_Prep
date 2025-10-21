@@ -34,3 +34,33 @@ class Solution {
 
 
 //HASHSET - 
+
+import java.util.*;
+
+class Solution {
+    public int longestConsecutive(int[] nums) {
+        if (nums.length == 0) return 0;
+
+        HashSet<Integer> set = new HashSet<>();
+        for (int num : nums) set.add(num);
+
+        int maxLen = 0;
+
+        for (int num : set) {
+            // Only start counting if 'num' is the start of a sequence
+            if (!set.contains(num - 1)) {
+                int curr = num;
+                int count = 1;
+
+                while (set.contains(curr + 1)) {
+                    curr++;
+                    count++;
+                }
+
+                maxLen = Math.max(maxLen, count);
+            }
+        }
+
+        return maxLen;
+    }
+}

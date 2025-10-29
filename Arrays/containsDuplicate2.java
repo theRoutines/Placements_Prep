@@ -4,7 +4,8 @@
 
 
 
-
+// logic - IF ELEMENT EXIST IN MAP, THEN CHECK IT DIFFERENCE OF CURRENT INDEX AND THE ALREADY PRESENT INDEX DIFF
+//          ELSE ADD THE ELEEMNT IN THE MAP
 
 class Solution {
     public boolean containsNearbyDuplicate(int[] nums, int k) {

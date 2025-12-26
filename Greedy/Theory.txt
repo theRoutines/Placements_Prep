@@ -1,0 +1,37 @@
+Greedy works only when the problem has:
+-> Greedy Choice Property
+-> Optimal Substructure
+
+You don’t need to formally prove these in interviews — but you must recognize patterns.
+
+2. 🔑 Keywords That SUGGEST Greedy
+
+Whenever you see these words, Greedy should ring a bell:
+
+Keyword / Phrase	Why it hints Greedy
+Maximum / Minimum	- Optimization
+Least / Most	- Choose best option
+As early as possible	- Sort + pick
+As late as possible	- Sort + pick
+Non-overlapping	- Interval problems
+Schedule / Meetings	Interval - Scheduling
+Fraction allowed	- Fractional Knapsack
+Remove minimum	- Choose best removal
+Reach end -	Jump strategy
+Shortest / longest	- Local best choice
+
+
+============================================================================================================================================
+
+1) Pattern 1 :- Interval Scheduling / Non-overlapping 
+Goal - 👉 Select the maximum number of intervals such that no two overlap.
+
+Ask this question:
+“Which meeting should I attend first so that I get the maximum remaining time for future meetings?”
+
+Answer:
+➡️ The meeting that finishes earliest
+
+The Exact Greedy Rule (Memorize This)
+Sort all intervals by end time
+Always pick the interval whose start ≥ last selected end
